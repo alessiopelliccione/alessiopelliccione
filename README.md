@@ -1,16 +1,15 @@
-## Hi there 👋
+# 👋 Hi, I'm Alessio Pelliccione
 
-<!--
-**alessiopelliccione/alessiopelliccione** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+💻 Software Engineer @ Allianz Technology Barcelona  
+⚡ Full Stack Developer (Angular / Spring Boot)  
+🌍 Based in Barcelona  
 
-Here are some ideas to get you started:
+### 🧠 Open Source Contributions
+- [PR #1662 – openai/openai-node](https://github.com/openai/openai-node/pull/1662): Added support for `output_text` parsing.
+- [My GitHub Projects](https://github.com/alessiopelliccione?tab=repositories)
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+### 🧩 Tech Stack
+- Frontend: Angular, TypeScript, Nx  
+- Backend: Node.js, Spring Boot  
+
+📫 Reach me on [LinkedIn](https://linkedin.com/in/alessiopelliccione)
