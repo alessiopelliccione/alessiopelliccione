@@ -1,7 +1,7 @@
 # 👋 Hi, I'm Alessio Pelliccione
 
-💻 Software Engineer @ Allianz Technology Barcelona  
-⚡ Full Stack Developer (Angular / Spring Boot)  
+💻 Software Engineer  
+⚡ Full Stack Developer (Angular / Node.js)  
 🌍 Based in Barcelona  
 
 ### 🧠 Open Source Contributions
@@ -9,7 +9,7 @@
 - [My GitHub Projects](https://github.com/alessiopelliccione?tab=repositories)
 
 ### 🧩 Tech Stack
-- Frontend: Angular, TypeScript, Nx  
-- Backend: Node.js, Spring Boot  
+- Frontend: Angular, TypeScript
+- Backend: Node.js
 
 📫 Reach me on [LinkedIn](https://linkedin.com/in/alessiopelliccione)
