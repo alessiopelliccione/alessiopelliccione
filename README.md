@@ -4,6 +4,9 @@
 ⚡ Full Stack Developer (Typescript, Angular, Node.js)  
 🌍 Based in Barcelona  
 
+### 👨🏻‍💻 Open Source Projects
+- [starter-page](https://github.com/alessiopelliccione/starter-page): Personal start page with neon-dark glass UI, grouped bookmarks, and instant tag-aware search
+
 ### 🧠 Open Source Contributions
 - [PR #1681 – openai/openai-node](https://github.com/openai/openai-node/pull/1681): Added support for `output_text` parsing.
 
