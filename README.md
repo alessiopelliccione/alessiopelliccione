@@ -5,6 +5,7 @@
 🌍 Based in Barcelona  
 
 ### 👨🏻‍💻 Open Source Projects
+- [ngx-gen-ui](https://github.com/alessiopelliccione/ngx-gen-ui): Lightweight Angular directive and service for streaming generative UI content via Firebase AI.
 - [reboost](https://github.com/alessiopelliccione/reboost): Implements the core engine: dependency graph builder, file hashing cache, and filesystem watcher — the foundation for future incremental rebuilds.
 - [starter-page](https://github.com/alessiopelliccione/starter-page): Personal start page with neon-dark glass UI, grouped bookmarks, and instant tag-aware search
 
