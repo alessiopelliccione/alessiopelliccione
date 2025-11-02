@@ -15,4 +15,6 @@
 - Frontend: Angular
 - Backend: Node.js
 
-📫 Reach me on [LinkedIn](https://linkedin.com/in/alessiopelliccione)
+## 🌍 Find me online
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230A66C2.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/alessiopelliccione)
+[![Medium](https://img.shields.io/badge/Medium-%23000000.svg?style=for-the-badge&logo=medium&logoColor=white)](https://medium.com/@alessiopelliccione)
