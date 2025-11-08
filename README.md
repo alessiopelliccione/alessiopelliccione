@@ -11,6 +11,7 @@
 - [starter-page](https://github.com/alessiopelliccione/starter-page): Personal start page with neon-dark glass UI, grouped bookmarks, and instant tag-aware search
 
 ### 🧠 Open Source Contributions
+- [PR #32281 – angular/components](https://github.com/angular/components/pull/32281): Refactor CDK schematics stylesheet discovery logic to centralize and simplify how global `.css` and `.scss` files are located.
 - [PR #2956 – modelcontextprotocol/servers](https://github.com/modelcontextprotocol/servers/pull/2956): Add documentation for Codex CLI sequential-thinking installation. 
 - [PR #1681 – openai/openai-node](https://github.com/openai/openai-node/pull/1681): Add support for `output_text` parsing.
 
