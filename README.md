@@ -8,8 +8,6 @@
 - [ollama-spotify-tools](https://github.com/alessiopelliccione/ollama-spotify-tools): A lightweight TypeScript toolkit that connects Ollama to the Spotify Web API, enabling local AI agents to interact with your Spotify account. It provides ready-to-use tool definitions (function-calling or MCP-compatible) for searching tracks, creating playlists, and controlling playback
 - [ngx-signal-combinators](https://github.com/alessiopelliccione/ngx-signal-combinators): Tree-shakable signal combinators for Angular 20+
 - [ngx-gen-ui](https://github.com/alessiopelliccione/ngx-gen-ui): Angular directives and services for streaming generative AI content with pluggable adapters (Firebase included by default).
-- [reboost](https://github.com/alessiopelliccione/reboost): Implements the core engine: dependency graph builder, file hashing cache, and filesystem watcher — the foundation for future incremental rebuilds.
-- [starter-page](https://github.com/alessiopelliccione/starter-page): Personal start page with neon-dark glass UI, grouped bookmarks, and instant tag-aware search
 
 ## 🌍 Find me online
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230A66C2.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/alessiopelliccione)
