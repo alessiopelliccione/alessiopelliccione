@@ -9,6 +9,11 @@
 - [ngx-signal-combinators](https://github.com/alessiopelliccione/ngx-signal-combinators): Tree-shakable signal combinators for Angular 20+
 - [ngx-gen-ui](https://github.com/alessiopelliccione/ngx-gen-ui): Angular directives and services for streaming generative AI content with pluggable adapters (Firebase included by default).
 
+### 💡 Selected Open Source Contributions
+| Project | Description | Link |
+|----------|--------------|------|
+| Angular  | Theme picker accessibility & animations | [PR #65082](https://github.com/angular/angular/pull/65082) |
+
 ## 🌍 Find me online
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230A66C2.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/alessiopelliccione)
 [![Medium](https://img.shields.io/badge/Medium-%23000000.svg?style=for-the-badge&logo=medium&logoColor=white)](https://medium.com/@alessiopelliccione)
