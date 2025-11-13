@@ -5,9 +5,11 @@
 🌍 Based in Barcelona  
 
 ### 👨🏻‍💻 Open Source Projects
-- [ollama-spotify-tools](https://github.com/alessiopelliccione/ollama-spotify-tools): A lightweight TypeScript toolkit that connects Ollama to the Spotify Web API, enabling local AI agents to interact with your Spotify account. It provides ready-to-use tool definitions (function-calling or MCP-compatible) for searching tracks, creating playlists, and controlling playback
-- [ngx-signal-combinators](https://github.com/alessiopelliccione/ngx-signal-combinators): Tree-shakable signal combinators for Angular 20+
-- [ngx-gen-ui](https://github.com/alessiopelliccione/ngx-gen-ui): Angular directives and services for streaming generative AI content with pluggable adapters (Firebase included by default).
+| Project | Description | Link |
+|----------|--------------|------|
+| ollama-spotify-tools  | A lightweight TypeScript toolkit that connects Ollama to the Spotify Web API, enabling local AI agents to interact with your Spotify account. It provides ready-to-use tool definitions (function-calling or MCP-compatible) for searching tracks, creating playlists, and controlling playback | [ollama-spotify-tools](https://github.com/alessiopelliccione/ollama-spotify-tools) |
+| ngx-signal-combinators  | Tree-shakable signal combinators for Angular 20+ | [ngx-signal-combinators](https://github.com/alessiopelliccione/ngx-signal-combinators) |
+| ngx-gen-ui  | Angular directives and services for streaming generative AI content with pluggable adapters. | [ngx-gen-ui](https://github.com/alessiopelliccione/ngx-gen-ui) |
 
 ### 💡 Selected Open Source Contributions
 | Project | Description | Link |
