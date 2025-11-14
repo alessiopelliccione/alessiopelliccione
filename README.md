@@ -14,8 +14,8 @@
 ### 💡 Selected Open Source Contributions
 | Project | Description | Link |
 |----------|--------------|------|
-| Angular  | Theme picker accessibility & animations | [PR #65082](https://github.com/angular/angular/pull/65082) |
-| Angular  | Update ARIA binding guidance and remove outdated attr. prefix requirement | [PR #65135](https://github.com/angular/angular/pull/65135) |
+| Angular (angular.dev)  | Theme picker accessibility & animations | [PR #65082](https://github.com/angular/angular/pull/65082) |
+| Angular (angular.dev)  | Update ARIA binding guidance and remove outdated attr. prefix requirement | [PR #65135](https://github.com/angular/angular/pull/65135) |
 
 ## 🌍 Find me online
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230A66C2.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/alessiopelliccione)
