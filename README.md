@@ -16,6 +16,9 @@
 |----------|--------------|------|
 | Angular (angular.dev)  | Theme picker accessibility & animations | [PR #65082](https://github.com/angular/angular/pull/65082) |
 | Angular (angular.dev)  | Update ARIA binding guidance and remove outdated attr. prefix requirement | [PR #65135](https://github.com/angular/angular/pull/65135) |
+| Angular DevTools  | Fix: Ensure the content script forwards Angular detection results to the service worker so the popup/icon reflects the page state. | [PR #65210](https://github.com/angular/angular/pull/65210) |
+| Angular Schematics | Refactor the stylesheet discovery logic within the CDK schematics to centralize and simplify how .css and .scss files are located. | [PR #32281](https://github.com/angular/components/pull/32281) |
+
 
 ## 🌍 Find me online
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230A66C2.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/alessiopelliccione)
