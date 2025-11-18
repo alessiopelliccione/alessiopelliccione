@@ -4,6 +4,8 @@
 ⚡ Full Stack Developer (Typescript, Angular, Node.js)  
 🌍 Based in Barcelona  
 
+👉 My website: https://alessiopelliccione.lovable.app
+
 ### 💡 Open Source Contributions
 | Project | Description | Link |
 |----------|--------------|------|
