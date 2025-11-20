@@ -9,6 +9,7 @@
 ### 💡 Open Source Contributions
 | Project | Description | Link | Status |
 |----------|--------------|------|------|
+| Angular (docs-infra)  | Add complexity level badge to adev update-guide | [PR #65413](https://github.com/angular/angular/pull/65413) | In review |
 | Angular (docs-infra)  | Allow linking of multiple symbols within single Shiki span | [PR #65409](https://github.com/angular/angular/pull/65409) | In review |
 | Angular (angular.dev)  | Theme picker accessibility & animations | [PR #65082](https://github.com/angular/angular/pull/65082) | Approved |
 | Angular (angular.dev)  | Update ARIA binding guidance and remove outdated attr. prefix requirement | [PR #65135](https://github.com/angular/angular/pull/65135) | Approved |
