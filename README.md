@@ -14,6 +14,7 @@
 | Angular (angular.dev)  | Theme picker accessibility & animations | [PR #65082](https://github.com/angular/angular/pull/65082) | Approved |
 | Angular (angular.dev)  | Update ARIA binding guidance and remove outdated attr. prefix requirement | [PR #65135](https://github.com/angular/angular/pull/65135) | Approved |
 | Angular (angular.dev)  | Add style binding example to style guide | [PR #65372](https://github.com/angular/angular/pull/65372) | Approved |
+| Angular (angular.dev)  | Prevent icons from being translated in aria guide | [PR #65414](https://github.com/angular/angular/pull/65414) | In review |
 | Angular DevTools  | Fix: Ensure the content script forwards Angular detection results to the service worker so the popup/icon reflects the page state. | [PR #65210](https://github.com/angular/angular/pull/65210) | Approved |
 | Angular DevTools  | Fix: Ensure external docs link opens correctly from extension popup. | [PR #65242](https://github.com/angular/angular/pull/65242) | Approved |
 | Angular Schematics | Refactor the stylesheet discovery logic within the CDK schematics to centralize and simplify how .css and .scss files are located. | [PR #32281](https://github.com/angular/components/pull/32281) | In review |
