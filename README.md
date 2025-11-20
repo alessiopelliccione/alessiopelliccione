@@ -11,7 +11,7 @@
 |----------|--------------|------|------|
 | Angular (docs-infra)  | Add complexity level badge to adev update-guide | [PR #65413](https://github.com/angular/angular/pull/65413) | In review |
 | Angular (docs-infra)  | Allow linking of multiple symbols within single Shiki span | [PR #65409](https://github.com/angular/angular/pull/65409) | In review |
-| Angular CLI (schematics)  | Add MCP configuration file to new workspaces | [PR #31892](https://github.com/angular/angular-cli/pull/31892) | In review |
+| Angular CLI (schematics)  | Add MCP configuration file to new workspaces | [PR #31892](https://github.com/angular/angular-cli/pull/31892) | Approved |
 | Angular (angular.dev)  | Theme picker accessibility & animations | [PR #65082](https://github.com/angular/angular/pull/65082) | Approved |
 | Angular (angular.dev)  | Update ARIA binding guidance and remove outdated attr. prefix requirement | [PR #65135](https://github.com/angular/angular/pull/65135) | Approved |
 | Angular (angular.dev)  | Add style binding example to style guide | [PR #65372](https://github.com/angular/angular/pull/65372) | Approved |
