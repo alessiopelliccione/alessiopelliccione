@@ -2,77 +2,84 @@ name: Update Portfolio Dashboard
 
 on:
   schedule:
-    - cron: '0 8 * * *' # Runs every day at 8:00 AM UTC
-  workflow_dispatch: # Allows manual trigger from the Actions tab
+    - cron: '0 8 * * *'
+  workflow_dispatch:
 
 jobs:
   update-issue:
     runs-on: ubuntu-latest
+    permissions:
+      issues: write
     steps:
       - name: Generate Dashboard
         uses: actions/github-script@v7
+        env:
+          SEARCH_TOKEN: ${{ secrets.CONTRIBUTION_UPDATE_TOKEN }}
         with:
-          # IMPORTANT: Uses the Personal Access Token to search public repos outside this one
-          github-token: ${{ secrets.MY_PAT }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const ISSUE_NUMBER = 1; // <--- Ensure this matches your target Issue ID
+            const ISSUE_NUMBER = 1; 
             const USERNAME = context.repo.owner;
+            const { Octokit } = require("@octokit/rest");
             
-            // Search for public PRs created by the user, excluding the profile repo itself
-            // Sorted by creation date (newest first)
+            const searchOctokit = new Octokit({ auth: process.env.SEARCH_TOKEN });
+            
             const query = `is:pr author:${USERNAME} is:public -repo:${USERNAME}/${context.repo.repo} sort:created-desc`;
-            
             console.log(`Searching with PAT: ${query}`);
 
-            // Fetch results using the GitHub Search API
-            const result = await github.rest.search.issuesAndPullRequests({
+            const result = await searchOctokit.search.issuesAndPullRequests({
               q: query,
-              per_page: 20
+              per_page: 50 
             });
 
-            const prs = result.data.items;
-            console.log(`Found ${prs.length} PRs.`);
+            let prs = result.data.items;
+            console.log(`Raw PRs found: ${prs.length}`);
 
-            // --- TITLE CLEANER HELPER ---
-            // Transforms "feat(core): add signal" into "Add signal" for a professional look
-            // Removes conventional commit prefixes like fix/feat/chore
+            // --- FILTERING LOGIC ---
+            prs = prs.filter(pr => {
+              const isAngular = pr.html_url.toLowerCase().includes('angular');
+              
+              const isMerged = !!pr.pull_request.merged_at;
+              const isOpen = pr.state === 'open';
+              
+              return isAngular && (isMerged || isOpen);
+            });
+            
+            prs = prs.slice(0, 20);
+            console.log(`Filtered Angular PRs: ${prs.length}`);
+
+            // --- CLEANER & FORMATTER ---
             const cleanTitle = (title) => {
               let clean = title.replace(/^(fix|feat|docs|refactor|chore|style|perf|test|ci)(\(.*\))?!?:?\s*/, '');
               return clean.charAt(0).toUpperCase() + clean.slice(1).replace(/\|/g, '-');
             };
 
-            // Determine status icon based on PR state
             const getStatus = (pr) => {
               if (pr.pull_request.merged_at) return '🟢 Merged';
-              if (pr.state === 'closed') return '🔴 Closed';
+              if (pr.state === 'closed') return '🔴 Closed'; 
               return '🟡 In Review';
             };
 
-            // Extract clean repo name (e.g., "angular/angular")
             const getRepoName = (url) => {
                const parts = url.split('/');
                return parts[parts.length - 4] + '/' + parts[parts.length - 3];
             };
 
-            // Build the Markdown table rows
             const tableRows = prs.map(pr => {
               const repo = getRepoName(pr.html_url);
-              const desc = cleanTitle(pr.title); // Use the sanitized title
+              const desc = cleanTitle(pr.title);
               const link = `[#${pr.number}](${pr.html_url})`;
               const status = getStatus(pr);
               
-              // Highlight high-impact repos (e.g., Angular ecosystem or Google)
-              const isHighImpact = repo.includes('angular') || repo.includes('google');
-              const repoDisplay = isHighImpact ? `**${repo}**` : repo;
+              const repoDisplay = `**${repo}**`;
 
               return `| ${repoDisplay} | ${desc} | ${link} | ${status} |`;
             }).join('\n');
 
-            // Construct the final Issue Body
             const issueBody = `
-            This issue tracks my significant contributions to Open Source.
+            This issue tracks my significant contributions to the **Angular Ecosystem**.
             
-            ### 🛠 Active Contributions Dashboard (Fully Automated)
+            ### 🛠 Angular Contributions Dashboard (Fully Automated)
             
             | Repo / Project | Description | Link | Status |
             | :--- | :--- | :---: | :---: |
@@ -82,7 +89,6 @@ jobs:
             > *Last updated: ${new Date().toUTCString()}*
             `;
 
-            // Update the issue using the authenticated client
             await github.rest.issues.update({
               owner: context.repo.owner,
               repo: context.repo.repo,
