@@ -2,31 +2,45 @@ name: Update Portfolio Dashboard
 
 on:
   schedule:
-    - cron: '0 8 * * *'
-  workflow_dispatch:
+    - cron: '0 8 * * *' # Runs every day at 8:00 AM UTC
+  workflow_dispatch: # Allows manual trigger from Actions tab
 
 jobs:
   update-issue:
     runs-on: ubuntu-latest
     permissions:
-      issues: write
+      issues: write # Grants write permission to the default GITHUB_TOKEN
     steps:
+      # 1. SETUP: Install the necessary library to use it in the script below
+      - name: Install dependencies
+        run: npm install @octokit/rest
+
+      # 2. EXECUTE SCRIPT
       - name: Generate Dashboard
         uses: actions/github-script@v7
         env:
+          # We pass the Personal Access Token as an environment variable
+          # This token is used ONLY for reading public PRs from other repos
           SEARCH_TOKEN: ${{ secrets.CONTRIBUTION_UPDATE_TOKEN }}
         with:
+          # We use the default GITHUB_TOKEN to update the issue in THIS repo
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const ISSUE_NUMBER = 1; 
             const USERNAME = context.repo.owner;
+            
+            // Import the library installed in the previous step
             const { Octokit } = require("@octokit/rest");
             
+            // 1. Create a "Search Client" using your Personal Access Token
+            // This is required to search globally (e.g., in angular/angular)
             const searchOctokit = new Octokit({ auth: process.env.SEARCH_TOKEN });
             
+            // Query: Public PRs authored by you, excluding this profile repo
             const query = `is:pr author:${USERNAME} is:public -repo:${USERNAME}/${context.repo.repo} sort:created-desc`;
             console.log(`Searching with PAT: ${query}`);
 
+            // Fetch 50 PRs to ensure we have enough after filtering
             const result = await searchOctokit.search.issuesAndPullRequests({
               q: query,
               per_page: 50 
@@ -37,20 +51,26 @@ jobs:
 
             // --- FILTERING LOGIC ---
             prs = prs.filter(pr => {
+              // 1. Angular Ecosystem Only (check if URL contains 'angular')
               const isAngular = pr.html_url.toLowerCase().includes('angular');
               
+              // 2. Remove "Closed" PRs (rejected/abandoned)
+              // Keep if Merged (merged_at exists) OR if still Open
               const isMerged = !!pr.pull_request.merged_at;
               const isOpen = pr.state === 'open';
               
               return isAngular && (isMerged || isOpen);
             });
             
+            // Keep only the top 20 after filtering
             prs = prs.slice(0, 20);
             console.log(`Filtered Angular PRs: ${prs.length}`);
 
-            // --- CLEANER & FORMATTER ---
+            // --- FORMATTING HELPERS ---
             const cleanTitle = (title) => {
+              // Removes conventional commit prefixes (e.g., "fix(core):")
               let clean = title.replace(/^(fix|feat|docs|refactor|chore|style|perf|test|ci)(\(.*\))?!?:?\s*/, '');
+              // Capitalize first letter and replace pipes to avoid breaking Markdown tables
               return clean.charAt(0).toUpperCase() + clean.slice(1).replace(/\|/g, '-');
             };
 
@@ -61,16 +81,19 @@ jobs:
             };
 
             const getRepoName = (url) => {
+               // Extracts "owner/repo" from URL
                const parts = url.split('/');
                return parts[parts.length - 4] + '/' + parts[parts.length - 3];
             };
 
+            // Build Markdown table rows
             const tableRows = prs.map(pr => {
               const repo = getRepoName(pr.html_url);
               const desc = cleanTitle(pr.title);
               const link = `[#${pr.number}](${pr.html_url})`;
               const status = getStatus(pr);
               
+              // Always bold the repo name since they are all Angular ecosystem now
               const repoDisplay = `**${repo}**`;
 
               return `| ${repoDisplay} | ${desc} | ${link} | ${status} |`;
@@ -89,6 +112,7 @@ jobs:
             > *Last updated: ${new Date().toUTCString()}*
             `;
 
+            // 2. Update the issue using the standard client (authenticated with GITHUB_TOKEN)
             await github.rest.issues.update({
               owner: context.repo.owner,
               repo: context.repo.repo,
