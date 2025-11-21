@@ -2,7 +2,7 @@
 
 💻 Software Engineer  
 ⚡ Full Stack Developer (Typescript, Angular, Node.js)  
-🅰️ Angular Contributor
+🅰️ Angular Contributor  
 🌍 Based in Barcelona  
 
 👉 My website: https://alessiopelliccione.lovable.app
