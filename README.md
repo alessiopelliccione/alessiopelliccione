@@ -10,7 +10,7 @@
 
 I am an active contributor to the **Angular** ecosystem, focusing on Developer Experience (DX), Tooling, and Documentation Infrastructure.
 
-👉 **[View my full Contribution Log & Technical Details here](https://github.com/alessiopelliccione/alessiopelliccione/issues/1)**
+👉 **[View my full Contribution Log](https://github.com/alessiopelliccione/alessiopelliccione/issues/1)**
 
 ### 👨🏻‍💻 Open Source Projects
 | Project | Description | Link |
