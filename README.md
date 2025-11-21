@@ -6,20 +6,14 @@
 
 👉 My website: https://alessiopelliccione.lovable.app
 
-### 💡 Open Source Contributions
-| Project | Description | Link | Status |
-|----------|--------------|------|------|
-| Angular (docs-infra)  | Add complexity level badge to adev update-guide | [PR #65413](https://github.com/angular/angular/pull/65413) | In review |
-| Angular (docs-infra)  | Allow linking of multiple symbols within single Shiki span | [PR #65409](https://github.com/angular/angular/pull/65409) | Approved |
-| Angular (docs-infra)  | Automate algolia index name based on angular/core version | [PR #65428](https://github.com/angular/angular/pull/65428) | Approved |
-| Angular CLI (schematics)  | Add MCP configuration file to new workspaces | [PR #31892](https://github.com/angular/angular-cli/pull/31892) | Approved |
-| Angular (angular.dev)  | Theme picker accessibility & animations | [PR #65082](https://github.com/angular/angular/pull/65082) | Approved |
-| Angular (angular.dev)  | Update ARIA binding guidance and remove outdated attr. prefix requirement | [PR #65135](https://github.com/angular/angular/pull/65135) | Approved |
-| Angular (angular.dev)  | Add style binding example to style guide | [PR #65372](https://github.com/angular/angular/pull/65372) | Approved |
-| Angular (angular.dev)  | Prevent icons from being translated in aria guide | [PR #65414](https://github.com/angular/angular/pull/65414) | Approved |
-| Angular DevTools  | Ensure the content script forwards Angular detection results to the service worker so the popup/icon reflects the page state. | [PR #65210](https://github.com/angular/angular/pull/65210) | Approved |
-| Angular DevTools  | Ensure external docs link opens correctly from extension popup. | [PR #65242](https://github.com/angular/angular/pull/65242) | Approved |
-| Angular Schematics | Refactor the stylesheet discovery logic within the CDK schematics to centralize and simplify how .css and .scss files are located. | [PR #32281](https://github.com/angular/components/pull/32281) | In review |
+### 🚀 Open Source Contributions
+
+I am an active contributor to the **Angular** ecosystem, focusing on Developer Experience (DX), Tooling, and Documentation Infrastructure.
+
+* **Focus Areas:** `angular/cli`, `angular/dev-tools`, `angular/components`, and `docs-infra`.
+* **Recent Highlights:** Improving accessibility in `angular.dev`, fixing synchronization issues in DevTools, and enhancing schematics logic.
+
+👉 **[View my full Contribution Log & Technical Details here](https://github.com/alessiopelliccione/alessiopelliccione/issues/1)**
 
 ### 👨🏻‍💻 Open Source Projects
 | Project | Description | Link |
