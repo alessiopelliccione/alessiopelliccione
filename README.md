@@ -10,9 +10,6 @@
 
 I am an active contributor to the **Angular** ecosystem, focusing on Developer Experience (DX), Tooling, and Documentation Infrastructure.
 
-* **Focus Areas:** `angular/cli`, `angular/dev-tools`, `angular/components`, and `docs-infra`.
-* **Recent Highlights:** Improving accessibility in `angular.dev`, fixing synchronization issues in DevTools, and enhancing schematics logic.
-
 👉 **[View my full Contribution Log & Technical Details here](https://github.com/alessiopelliccione/alessiopelliccione/issues/1)**
 
 ### 👨🏻‍💻 Open Source Projects
