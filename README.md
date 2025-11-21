@@ -10,7 +10,7 @@
 | Project | Description | Link | Status |
 |----------|--------------|------|------|
 | Angular (docs-infra)  | Add complexity level badge to adev update-guide | [PR #65413](https://github.com/angular/angular/pull/65413) | In review |
-| Angular (docs-infra)  | Allow linking of multiple symbols within single Shiki span | [PR #65409](https://github.com/angular/angular/pull/65409) | In review |
+| Angular (docs-infra)  | Allow linking of multiple symbols within single Shiki span | [PR #65409](https://github.com/angular/angular/pull/65409) | Approved |
 | Angular (docs-infra)  | Automate algolia index name based on angular/core version | [PR #65428](https://github.com/angular/angular/pull/65428) | Approved |
 | Angular CLI (schematics)  | Add MCP configuration file to new workspaces | [PR #31892](https://github.com/angular/angular-cli/pull/31892) | Approved |
 | Angular (angular.dev)  | Theme picker accessibility & animations | [PR #65082](https://github.com/angular/angular/pull/65082) | Approved |
