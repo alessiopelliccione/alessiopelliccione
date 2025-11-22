@@ -1,7 +1,6 @@
 # 👋 Hi, I'm Alessio Pelliccione
 
 💻 Software Engineer  
-⚡ Full Stack Developer (Typescript, Angular, Node.js)  
 🅰️ Angular Contributor  
 🌍 Based in Barcelona  
 
