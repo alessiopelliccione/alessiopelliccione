@@ -8,9 +8,11 @@
 
 ### 🚀 Open Source Contributions
 
-I am an active contributor to the **Angular** ecosystem, focusing on Developer Experience (DX), Tooling, and Documentation Infrastructure.
+I am an active contributor to the **Angular** and **Nx** ecosystems, focusing on Developer Experience (DX), Tooling, and Documentation Infrastructure.
 
-👉 **[View my full Contribution Log](https://github.com/alessiopelliccione/alessiopelliccione/issues/1)**
+👉 **[View my Angular Contribution Log](https://github.com/alessiopelliccione/alessiopelliccione/issues/1)**
+
+👉 **[View my Nx Contribution Log](https://github.com/alessiopelliccione/alessiopelliccione/issues/2)**
 
 ### 👨🏻‍💻 Open Source Projects
 | Project | Description | Link |
