@@ -69,9 +69,9 @@ async function updateEcosystemIssue(allPrs, issueNumber, ecosystemName, filterKe
     }).join('\n');
 
     const issueBody = `
-This issue tracks my significant contributions to the **${ecosystemName} Ecosystem**.
+This issue tracks my contributions to the **${ecosystemName} Ecosystem**.
 
-### 🛠 ${ecosystemName} Contributions Dashboard (Fully Automated)
+### 🛠 ${ecosystemName} Contributions Dashboard
 
 | Repo / Project | Description | Link | Status |
 | :--- | :--- | :---: | :---: |
