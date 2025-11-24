@@ -33,7 +33,6 @@ const cleanTitle = (title) => {
 };
 
 const getStatus = (pr) => {
-    if (pr.pull_request.approved_at) return '🟢 Approved';
     if (pr.pull_request.merged_at) return '🟢 Merged';
     if (pr.state === 'closed') return '🔴 Closed';
     return '🟡 In Review';
