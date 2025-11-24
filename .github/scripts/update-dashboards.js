@@ -33,7 +33,6 @@ const cleanTitle = (title) => {
 };
 
 const getStatus = (pr) => {
-    if (pr.pull_request.approved_at) return '🟢 Approved';
     if (pr.pull_request.merged_at) return '🟢 Merged';
     if (pr.state === 'closed') return '🔴 Closed';
     return '🟡 In Review';
@@ -70,17 +69,17 @@ async function updateEcosystemIssue(allPrs, issueNumber, ecosystemName, filterKe
     }).join('\n');
 
     const issueBody = `
-This issue tracks my significant contributions to the **${ecosystemName} Ecosystem**.
-
-### 🛠 ${ecosystemName} Contributions Dashboard (Fully Automated)
-
-| Repo / Project | Description | Link | Status |
-| :--- | :--- | :---: | :---: |
-${tableRows}
-
----
-> *Last updated: ${new Date().toUTCString()}*
-`;
+        This issue tracks my contributions to the **${ecosystemName} Ecosystem**.
+        
+        ### 🛠 ${ecosystemName} Contributions Dashboard
+        
+        | Repo / Project | Description | Link | Status |
+        | :--- | :--- | :---: | :---: |
+        ${tableRows}
+        
+        ---
+        > *Last updated at: ${new Date().toUTCString()}*
+    `;
 
     // Update the issue
     await defaultOctokit.rest.issues.update({
