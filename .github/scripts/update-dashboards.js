@@ -45,13 +45,18 @@ const getRepoName = (url) => {
 };
 
 // --- MAIN LOGIC ---
-async function updateEcosystemIssue(allPrs, issueNumber, ecosystemName, filterKeyword) {
+async function updateEcosystemIssue(allPrs, issueNumber, ecosystemName, filterKeywords, excludeMode = false) {
     // Filter PRs for this ecosystem
     let prs = allPrs.filter(pr => {
-        const matchesEcosystem = pr.html_url.toLowerCase().includes(filterKeyword);
+        const url = pr.html_url.toLowerCase();
+        const keywords = Array.isArray(filterKeywords) ? filterKeywords : [filterKeywords];
+
+        const matchesKeywords = keywords.some(keyword => url.includes(keyword));
+        const shouldInclude = excludeMode ? !matchesKeywords : matchesKeywords;
+
         const isMerged = !!pr.pull_request.merged_at;
         const isOpen = pr.state === 'open';
-        return matchesEcosystem && (isMerged || isOpen);
+        return shouldInclude && (isMerged || isOpen);
     });
 
     // Keep only the top 20 after filtering
@@ -107,9 +112,10 @@ async function main() {
         const allPrs = result.data.items;
         console.log(`Raw PRs found: ${allPrs.length}`);
 
-        // Update both ecosystems
+        // Update all ecosystems
         await updateEcosystemIssue(allPrs, 1, 'Angular', 'angular');
         await updateEcosystemIssue(allPrs, 2, 'Nx', 'nrwl');
+        await updateEcosystemIssue(allPrs, 3, 'Other Open Source Projects', ['angular', 'nrwl'], true);
 
         console.log('🎉 All dashboards updated successfully!');
     } catch (error) {
