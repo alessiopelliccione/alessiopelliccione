@@ -8,13 +8,21 @@
 
 ### 🚀 Open Source Contributions
 
-I am an active contributor to the **Angular**, **Nx** and other ecosystems, focusing on Developer Experience (DX), Tooling, and Documentation Infrastructure.
+<img src="https://avatars.githubusercontent.com/u/139426?s=200&v=4" align="right" width="120" alt="Angular Logo" />
 
-👉 **View my [Angular Contribution Log](https://github.com/alessiopelliccione/alessiopelliccione/issues/1)**
+As a Software Engineer, I believe in giving back to the tools that power the web. My primary focus is on the **Angular Ecosystem** (Framework, CLI, Components), improving Developer Experience and Documentation Infrastructure.
 
-👉 **View my [Nx Contribution Log](https://github.com/alessiopelliccione/alessiopelliccione/issues/2)**
+![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 
-👉 **View my [Other OSS Projects Contribution Log](https://github.com/alessiopelliccione/alessiopelliccione/issues/3)**
+#### 🏆 Featured Contributions
+
+- **Tooling & AI (CLI):** [Add MCP configuration to new workspaces](https://github.com/angular/angular-cli/pull/31892) - *Enabled AI-assisted development workflows by integrating Model Context Protocol support.*
+- **Infrastructure:** [Automate Algolia index naming](https://github.com/angular/angular/pull/65428) - *Improved CI/CD reliability by automating version-based indexing logic.*
+- **UX & Accessibility:** [Improve theme picker A11y & animations](https://github.com/angular/angular/pull/65082) - *Enhanced usability and visual polish for the documentation platform.*
+
+> 📂 **Detailed Contribution Logs:**
+> [Angular Ecosystem](https://github.com/alessiopelliccione/alessiopelliccione/issues/1) • [General OSS](https://github.com/alessiopelliccione/alessiopelliccione/issues/3)
 
 ### 👨🏻‍💻 Open Source Projects
 | Project | Description | Link |
