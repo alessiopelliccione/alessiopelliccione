@@ -115,7 +115,7 @@ async function main() {
         // Update all ecosystems
         await updateEcosystemIssue(allPrs, 1, 'Angular', 'angular');
         await updateEcosystemIssue(allPrs, 2, 'Nx', 'nrwl');
-        await updateEcosystemIssue(allPrs, 3, 'Other Open Source Projects', ['angular', 'nrwl'], true);
+        await updateEcosystemIssue(allPrs, 3, 'Other Open Source Projects', ['angular', 'nrwl', 'alessiopelliccione'], true);
 
         console.log('🎉 All dashboards updated successfully!');
     } catch (error) {
