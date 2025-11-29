@@ -50,8 +50,27 @@ As a Software Engineer, I believe in giving back to the tools that power the web
 
 I build tools that explore the intersection of **Angular**, **Generative AI**, and **Performance**.
 
-🌟 Featured Project: [**Doctype**](https://github.com/doctypedev/doctype)
-Self-maintaining documentation system. Doctype eliminates documentation drift in monorepos. It uses AST analysis to verify code references in Markdown and deploys a GenAI Agent to generate documentation and auto-fix discrepancies.
+<table>
+  <tr>
+    <td width="20%" align="center" style="vertical-align: top">
+      <img src="https://github.com/doctypedev/doctype/raw/main/assets/doctype_logo.png" width="160" alt="Doctype Logo" />
+    </td>
+    <td width="80%" valign="top">
+      <h3>🌟 Featured: <a href="https://github.com/doctypedev/doctype">Doctype</a></h3>
+      <p>
+        <img src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white" alt="TypeScript"/>
+        <img src="https://img.shields.io/badge/GenAI-Agent-000?logo=openai&logoColor=white" alt="GenAI"/>
+        <img src="https://img.shields.io/badge/AST_Analysis-purple" alt="AST"/>
+      </p>
+      <p>
+        <b>Self-maintaining documentation system.</b><br>
+        Doctype eliminates documentation drift in monorepos. It uses <b>AST analysis</b> to verify code references in Markdown and deploys a <b>GenAI Agent</b> to generate documentation and auto-fix discrepancies via Pull Requests.
+      </p>
+    </td>
+  </tr>
+</table>
+
+Other side projects:
 
 | Project | Tech Stack | Description |
 | :--- | :--- | :--- |
