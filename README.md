@@ -50,6 +50,9 @@ As a Software Engineer, I believe in giving back to the tools that power the web
 
 I build tools that explore the intersection of **Angular**, **Generative AI**, and **Performance**.
 
+🌟 Featured Project: [**Doctype**](https://github.com/doctypedev/doctype)
+Self-maintaining documentation system. Doctype eliminates documentation drift in monorepos. It uses AST analysis to verify code references in Markdown and deploys a GenAI Agent to generate documentation and auto-fix discrepancies.
+
 | Project | Tech Stack | Description |
 | :--- | :--- | :--- |
 | [**ollama-spotify-tools**](https://github.com/alessiopelliccione/ollama-spotify-tools) | ![TS](https://img.shields.io/badge/TypeScript-blue?logo=typescript&logoColor=white) ![AI](https://img.shields.io/badge/GenAI-Ollama-000?logo=openai&logoColor=white) | **AI Agent Toolkit.** Connects local LLMs (Ollama) to Spotify API via MCP or function-calling to control playback and manage playlists. |
