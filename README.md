@@ -52,10 +52,10 @@ I build tools that explore the intersection of **Angular**, **Generative AI**, a
 
 <table>
   <tr>
-    <td width="20%" align="center" style="vertical-align: top">
+    <td width="30%" align="center" style="vertical-align: top">
       <img src="https://github.com/doctypedev/doctype/raw/main/assets/doctype_logo.png" width="160" alt="Doctype Logo" />
     </td>
-    <td width="80%" valign="top">
+    <td width="70%" valign="top">
       <h3>🌟 Featured: <a href="https://github.com/doctypedev/doctype">Doctype</a></h3>
       <p>
         <img src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white" alt="TypeScript"/>
