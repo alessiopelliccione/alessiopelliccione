@@ -59,6 +59,7 @@ I build tools that explore the intersection of **Angular**, **Generative AI**, a
       <h3>🌟 Featured: <a href="https://github.com/doctypedev/doctype">Doctype</a></h3>
       <p>
         <img src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white" alt="TypeScript"/>
+        <img src="https://shields.io/badge/-Rust-3776AB?style=flat&color=yellow&logo=rust" alt="Rust"/>
         <img src="https://img.shields.io/badge/GenAI-Agent-000?logo=openai&logoColor=white" alt="GenAI"/>
         <img src="https://img.shields.io/badge/AST_Analysis-purple" alt="AST"/>
       </p>
