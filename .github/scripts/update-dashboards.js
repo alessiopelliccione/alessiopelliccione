@@ -45,22 +45,14 @@ const getRepoName = (url) => {
 };
 
 // --- MAIN LOGIC ---
-async function updateEcosystemIssue(allPrs, issueNumber, ecosystemName, filterKeywords, excludeMode = false) {
-    // Filter PRs for this ecosystem
-    let prs = allPrs.filter(pr => {
-        const url = pr.html_url.toLowerCase();
-        const keywords = Array.isArray(filterKeywords) ? filterKeywords : [filterKeywords];
-
-        const matchesKeywords = keywords.some(keyword => url.includes(keyword));
-        const shouldInclude = excludeMode ? !matchesKeywords : matchesKeywords;
-
+async function updateEcosystemIssue(prs, issueNumber, ecosystemName) {
+    // Filter to only merged or open PRs, then keep top 20
+    prs = prs.filter(pr => {
         const isMerged = !!pr.pull_request.merged_at;
         const isOpen = pr.state === 'open';
-        return shouldInclude && (isMerged || isOpen);
-    });
+        return isMerged || isOpen;
+    }).slice(0, 20);
 
-    // Keep only the top 20 after filtering
-    prs = prs.slice(0, 20);
     console.log(`Filtered ${ecosystemName} PRs: ${prs.length}`);
 
     // Build Markdown table rows
@@ -99,23 +91,39 @@ ${tableRows}
 
 async function main() {
     try {
-        // Query: Public PRs authored by you, excluding this profile repo
-        const query = `is:pr author:${USERNAME} is:public -repo:${USERNAME}/${repo} sort:created-desc`;
-        console.log(`Searching with PAT: ${query}`);
+        // Fetch PRs for each ecosystem with targeted queries
 
-        // Fetch 50 PRs to ensure we have enough after filtering
-        const result = await searchOctokit.search.issuesAndPullRequests({
-            q: query,
+        // 1. Angular ecosystem - search in angular org
+        const angularQuery = `is:pr author:${USERNAME} is:public org:angular sort:created-desc`;
+        console.log(`Searching Angular PRs: ${angularQuery}`);
+        const angularResult = await searchOctokit.search.issuesAndPullRequests({
+            q: angularQuery,
             per_page: 50
         });
+        console.log(`Raw Angular PRs found: ${angularResult.data.items.length}`);
 
-        const allPrs = result.data.items;
-        console.log(`Raw PRs found: ${allPrs.length}`);
+        // 2. Nx ecosystem - search in nrwl org
+        const nxQuery = `is:pr author:${USERNAME} is:public org:nrwl sort:created-desc`;
+        console.log(`Searching Nx PRs: ${nxQuery}`);
+        const nxResult = await searchOctokit.search.issuesAndPullRequests({
+            q: nxQuery,
+            per_page: 50
+        });
+        console.log(`Raw Nx PRs found: ${nxResult.data.items.length}`);
+
+        // 3. Other open source - exclude angular, nrwl, doctypedev, and personal repos
+        const otherQuery = `is:pr author:${USERNAME} is:public -org:angular -org:nrwl -org:doctypedev -user:${USERNAME} sort:created-desc`;
+        console.log(`Searching Other PRs: ${otherQuery}`);
+        const otherResult = await searchOctokit.search.issuesAndPullRequests({
+            q: otherQuery,
+            per_page: 50
+        });
+        console.log(`Raw Other PRs found: ${otherResult.data.items.length}`);
 
         // Update all ecosystems
-        await updateEcosystemIssue(allPrs, 1, 'Angular', 'angular');
-        await updateEcosystemIssue(allPrs, 2, 'Nx', 'nrwl');
-        await updateEcosystemIssue(allPrs, 3, 'Other Open Source Projects', ['angular', 'nrwl', 'alessiopelliccione', 'doctypedev'], true);
+        await updateEcosystemIssue(angularResult.data.items, 1, 'Angular');
+        await updateEcosystemIssue(nxResult.data.items, 2, 'Nx');
+        await updateEcosystemIssue(otherResult.data.items, 3, 'Other Open Source Projects');
 
         console.log('🎉 All dashboards updated successfully!');
     } catch (error) {
