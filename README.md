@@ -53,7 +53,7 @@ I build tools that explore the intersection of **Angular**, **Generative AI**, a
 <table>
   <tr>
     <td width="30%" align="center" style="vertical-align: top">
-      <img src="https://github.com/doctypedev/sintesi/raw/main/assets/full_logo.png" width="160" alt="Doctype Logo" />
+      <img src="https://github.com/doctypedev/sintesi/raw/main/assets/full_logo.png" width="160" alt="Sintesi Logo" />
     </td>
     <td width="70%" valign="top">
       <h3>🌟 Featured: <a href="https://github.com/doctypedev/sintesi">Sintesi</a></h3>
