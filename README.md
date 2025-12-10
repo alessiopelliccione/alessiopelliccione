@@ -53,10 +53,10 @@ I build tools that explore the intersection of **Angular**, **Generative AI**, a
 <table>
   <tr>
     <td width="30%" align="center" style="vertical-align: top">
-      <img src="https://github.com/doctypedev/doctype/raw/main/assets/doctype_logo.png" width="160" alt="Doctype Logo" />
+      <img src="https://github.com/doctypedev/sintesi/raw/main/assets/full_logo.png" width="160" alt="Doctype Logo" />
     </td>
     <td width="70%" valign="top">
-      <h3>🌟 Featured: <a href="https://github.com/doctypedev/doctype">Doctype</a></h3>
+      <h3>🌟 Featured: <a href="https://github.com/doctypedev/sintesi">Sintesi</a></h3>
       <p>
         <img src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white" alt="TypeScript"/>
         <img src="https://shields.io/badge/-Rust-3776AB?style=flat&color=yellow&logo=rust" alt="Rust"/>
@@ -65,7 +65,7 @@ I build tools that explore the intersection of **Angular**, **Generative AI**, a
       </p>
       <p>
         <b>Self-maintaining documentation system.</b><br>
-        Doctype eliminates documentation drift in monorepos. It uses <b>AST analysis</b> to verify code references in Markdown and deploys a <b>GenAI Agent</b> to generate documentation and auto-fix discrepancies via Pull Requests.
+        Sintesi eliminates documentation drift in monorepos.
       </p>
     </td>
   </tr>
